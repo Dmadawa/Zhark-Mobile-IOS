@@ -1,0 +1,6 @@
+framework module Pods_payPalTest {
+  umbrella header "Pods-payPalTest-umbrella.h"
+
+  export *
+  module * { export * }
+}

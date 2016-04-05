@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UITableViewController
+- (IBAction)doLogin:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *txtUserName;
+@property (weak, nonatomic) IBOutlet UITextField *txtPassword;
 
 
 @end

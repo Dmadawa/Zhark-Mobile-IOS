@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "userService.h"
 
 @interface ViewController ()
 
@@ -24,4 +25,22 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)doLogin:(id)sender {
+    NSString* Identifier = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+    NSLog(@"AppID%@",Identifier);
+    
+    NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+    NSLog(@"version%@",version);
+    
+    [userService getAuthTokenWithUserName:self.txtUserName.text andPassword:self.txtPassword.text os:@"ios" udid:Identifier  version:version mob:@"true" withBlock:^(NSString *authToken, NSError *error) {
+        
+        
+        
+        
+        
+        
+        
+    }];
+}
+ 
 @end
